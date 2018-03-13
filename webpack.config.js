@@ -89,24 +89,6 @@ module.exports = {
     },
 
     resolve: {
-        alias: {
-            jquery: path.resolve(
-                __dirname,
-                "./node_modules/jquery/dist/jquery.js"
-            ),
-            bootstrap_css: path.resolve(
-                __dirname,
-                "./node_modules/bootstrap/dist/css/bootstrap.css"
-            ),
-            bootstrap_js: path.resolve(
-                __dirname,
-                "./node_modules/bootstrap/dist/js/bootstrap.js"
-            ),
-            popper_js: path.resolve(
-                __dirname,
-                "./node_modules/popper.js/dist/popper.js"
-            )
-        },
         extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss"]
     },
 

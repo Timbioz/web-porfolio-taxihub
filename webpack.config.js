@@ -110,12 +110,36 @@ module.exports = {
                         options: {}
                     }
                 ]
+            },
+            {
+                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit: 50000,
+                            mimetype: "application/font-woff",
+                            name: "fonts/[name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(ttf|eot)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "fonts/[name].[ext]"
+                        }
+                    }
+                ]
             }
         ]
     },
 
     resolve: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss"]
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss", ".ttf", ".eot", ".woff", ".woff2"]
     },
 
     plugins: [
@@ -125,7 +149,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "My App timbioz",
             filename: "index.html",
-            template: "src/views/webpack_templates/index.html",
+            template: "src/views/index.html",
             hash: true,
             minify: {
                 html5: true

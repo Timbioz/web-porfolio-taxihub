@@ -6,3 +6,5 @@ import "bootstrap/dist/js/bootstrap.min";
 // Images import
 // Logo
 import "../images/taxihub-logo.png";
+
+import "../images/circle.svg";
